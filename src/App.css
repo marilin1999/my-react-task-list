@@ -1,0 +1,106 @@
+/* Estilo para el elemento root */
+#root {
+  max-width: 1280px;
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 2rem;
+  text-align: center; /* Alinea el texto al centro */
+  border: solid black;
+  color: black;
+}
+
+/* Estilo general del body */
+body {
+  display: flex; /* Usa Flexbox */
+  flex-direction: column; /* Orientación vertical */
+  justify-content: center; /* Centra contenido verticalmente */
+  align-items: center; /* Centra contenido horizontalmente */
+  min-height: 100vh !important; /* Altura mínima del viewport */
+  margin: 0; /* Elimina el margen por defecto */
+  padding: 0; /* Elimina el relleno por defecto */
+  background-color: #fff; /* Fondo del body */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  padding-bottom: 30px !important;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.hamburger-button {
+  position: fixed !important;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: black; /* Color del botón cambiado a negro */
+}
+
+.menu-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.menu-container.open {
+  display: block;
+}
+
+.menu-link {
+  display: block;
+  margin-bottom: 10px;
+  color: black; /* Color del texto de los enlaces */
+  text-decoration: none; /* Elimina el subrayado */
+  padding: 10px 0; /* Añade un poco de espacio alrededor del texto */
+  font-size: 16px; /* Tamaño del texto */
+}
+
+.menu-link:hover {
+  text-decoration: underline; /* Efecto al pasar el mouse sobre el enlace */
+}
+
+
+
+
