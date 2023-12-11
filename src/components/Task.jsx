@@ -1,8 +1,10 @@
-import { Box, Text, Button, useToast } from '@chakra-ui/react';
+import { Box, Text, Button, useToast, useColorModeValue } from '@chakra-ui/react';
 import { DeleteIcon, EditIcon, CheckIcon, CloseIcon } from '@chakra-ui/icons';
 
 const Task = ({ id, title, descripcion, realizado, borrarTarea, iniciarEdicion, toggleComplete }) => {
   const toast = useToast();
+  const bgColor = useColorModeValue(realizado ? 'teal.100' : 'gray.100', realizado ? 'teal.700' : 'gray.700');
+  const color = useColorModeValue('gray.800', 'white');
 
   const handleDelete = () => {
     const confirmDelete = window.confirm('¿Estás seguro de que quieres borrar esta tarea?');
@@ -31,7 +33,8 @@ const Task = ({ id, title, descripcion, realizado, borrarTarea, iniciarEdicion, 
       p="10px"
       mb="10px"
       justifyContent="space-between"
-      bgColor={realizado ? 'teal.100' : 'inherit'}
+      bgColor={bgColor}
+      color={color}
     >
       <Text fontWeight="bold">{title}</Text>
       <Text>{descripcion}</Text>
@@ -52,6 +55,7 @@ const Task = ({ id, title, descripcion, realizado, borrarTarea, iniciarEdicion, 
 };
 
 export default Task;
+
 
 
 

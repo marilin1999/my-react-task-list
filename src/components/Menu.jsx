@@ -4,6 +4,7 @@ import { Button } from '@chakra-ui/react';
 
 function Menu() {
   const [isOpen, setIsOpen] = useState(false);
+  
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
